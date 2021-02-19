@@ -12,7 +12,17 @@ cd SymfonyExam
 composer install
 ```
 
-Crée un .env à la racine du projetet configuré le avec l'aide du .env.test
+Générer des clés SSH avec Openssl
+
+```
+openssl genrsa -out config/jwt/private.pem -aes256 4096
+```
+
+```
+openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
+```
+
+Créer un .env à la racine du projetet configuré le avec l'aide du .env.test
 
 ```
 php bin/console doctrine:database:create
