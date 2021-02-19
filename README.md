@@ -12,7 +12,7 @@ cd SymfonyExam
 composer install
 ```
 
-Générer des clés SSH avec Openssl
+Créer un dossier jwt dans le dossier config et générer des clés SSH avec Openssl
 
 ```
 openssl genrsa -out config/jwt/private.pem -aes256 4096
